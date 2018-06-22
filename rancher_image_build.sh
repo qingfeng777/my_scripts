@@ -4,6 +4,7 @@
 echo "begin"
 
 cd /root/go/src/github.com/rancher/rancher/
+git pull
 go build -i -tags k8s -ldflags "-X main.VERSION=v200" -o bin/rancher  && echo "build code succeed" || exit 1
 
 echo "copy file and start build image"
